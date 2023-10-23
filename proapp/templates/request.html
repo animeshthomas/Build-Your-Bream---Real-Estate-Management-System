@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>REQUEST</title>
+
+
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" >
+<h3>BARGAIN</h3><BR>
+    {% csrf_token %}
+    <table border="2">
+        <tr>
+            <td>REQUEST NO</td> <td>{{rqno}}</td>
+            </tr>
+        <tr>
+            <td>REQUEST DATE</td><td>{{rqdate}}</td>
+        </tr>
+        <tr>
+            <td>BID</td><td>{{bids}}</td>
+            </tr>
+        <tr>
+            <td>BNAME</td> <td>{{bname}}</td>
+            </tr>
+        <tr>
+            <td>PID</td><td>{{pid}}</td>
+            </tr>
+        <tr>
+            <td>PRICE</td><td>{{price}}</td>
+            </tr>
+        <tr>
+            <td>REQUESTED PRICE</td><td> <input type="text" name ="t1" required></td>
+
+        </tr>
+
+
+        </tr>
+    </table>
+
+    <input type="submit" value="REGISTER"><BR><BR>
+
+</form>
+</div>
+</body>
+</html>

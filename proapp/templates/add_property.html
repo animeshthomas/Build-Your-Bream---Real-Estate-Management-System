@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER PROPERTY</title>
+
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" class="form-inline">
+<h3><font color="blue">PROPERTY REGISTRATION</fontcolor></h3><BR>
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input type="submit" value="POST"><BR><BR>
+    <a href="/login/">LOGIN</a>
+    <a href="/">BACK TO HOME</a>
+</form>
+</div>
+</body>
+</html>

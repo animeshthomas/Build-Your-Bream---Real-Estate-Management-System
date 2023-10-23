@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>PURCHASES</title>
+
+
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" >
+<h3>BARGAIN</h3><BR>
+    {% csrf_token %}
+    <table border="2">
+        <tr>
+            <td>PURCHASE NO</td> <td>{{pno}}</td>
+            </tr>
+        <tr>
+            <td>PURCHASE DATE</td><td>{{pdate}}</td>
+        </tr>
+        <tr>
+            <td>PID</td><td>{{pid}}</td>
+            </tr>
+        <tr>
+            <td>BID</td> <td>{{bid}}</td>
+            </tr>
+        <tr>
+            <td>BNAME</td><td>{{bname}}</td>
+            </tr>
+        <tr>
+            <td>PRICE</td><td>{{price}}</td>
+
+            </tr>
+        <tr>
+            <td>AMOUNT PAID</td><td>{{qprice}}</td>
+            </tr>
+        <td>CARD NO</td><td><input type="text" name ="t1" required></td></td>
+        </tr>
+
+
+        </tr>
+    </table>
+
+    <input type="submit" value="PURCHASE"><BR><BR>
+
+</form>
+</div>
+</body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+{% csrf_token %}
+
+<table border="2">
+    <tr>
+        <td>PROPERTY TYPE</td><td>TRANSACTION TYPE</td><td>OWNERSHIP TYPE</td><td>DISTRICT</td><td>TOWN</td><td>PINCODE</td>
+        </tr>
+    <tr>
+        <td><select name="ptype">
+            <option selected disabled >--select--></option>
+            {% for j in arec %}
+            <option>{{ j.ptype }}</option>
+            {% endfor %}
+
+        </select>
+        </td>
+
+
+        <td><select name="ttype">
+            <option selected disabled >-- select--</option>
+            {% for j in erec %}
+            <option>{{ j.ttype }}</option>
+            {% endfor %}
+        </select></td>
+
+
+        <td><select name="otype">
+            <option selected disabled >-- select--</option>
+            {% for j in brec %}
+            <option>{{ j.otype }}</option>
+            {% endfor %}
+
+        </select> </td>
+
+        <td><select name="district">
+            <option selected disabled >-- select--</option>
+            {% for j in crec %}
+            <option>{{ j.district }}</option>
+            {% endfor %}
+        </select></td>
+    </td>
+
+        <td><select name="town">
+            <option selected disabled >-- select--</option>
+            {% for j in drec %}
+            <option>{{ j.town }}</option>
+            {% endfor %}
+        </select>
+        </td>
+
+        <td>
+            <select name="pincode">
+        <option selected disabled >-- select--</option>
+            {% for j in frec %}
+            <option>{{ j.pincode }}</option>
+            {% endfor %}
+            </select>
+ </td>
+
+    </tr>
+   <tr><td> <input type="submit" value="SEARCH" name="find"></td></tr>
+
+
+</table>
+<table border="2">
+    {% for i in result %}
+    <tr>
+        <th>PROPERTY TYPE</th>
+        <th>TTYPE</th>
+        <th>OWNERSHIP</th>
+        <th>DISTRICT</th>
+        <th>TOWN</th>
+        <th>PINCODE</th>
+    </tr>
+     <tr><td>{{i.ptype}}</td> <td>{{i.ttype}}</td><td>{{i.otype}}</td><td>{{i.district}}</td><td>{{i.town}}</td><td>{{i.pincode}}</td></tr><td><a href="/rqst/{{i.pid}}/{{i.price}}/{{i.oid}}">BARGAIN</a></td><td><a href="/buyn/{{i.pid}}/{{i.oid}}/{{i.price}}">PURCHASE</a></td><a href="/ser/">GO BACK</a>
+    {% endfor %}
+</table>
+    </form>
+</body>
+</html>

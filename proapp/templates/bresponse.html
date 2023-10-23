@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2">
+    {% for object in object_list %}
+    <tr>
+        <td>{{object.rqno}}</td>
+        <td>{{object.rqdate}}</td>
+        <td>{{object.bid}}</td>
+        <td>{{object.bname}}</td>
+        <td>{{object.pid}}</td>
+        <td>{{object.oid}}</td>
+        <td>{{object.price}}</td>
+        <td>{{object.qprice}}</td>
+        {% if object.rights == 'A' %}
+             <td><a href="/buy/{{object.rqno}}/{{object.pid}}/{{object.bid}}/{{object.oid}}/{{object.price}}/{{object.qprice}}">Buy Now</a></td>
+        {% else %}
+            <td><a href="#">Not a feasible Rate</a></td>
+        {% endif %}
+
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>

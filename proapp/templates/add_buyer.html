@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>BUYER</title>
+
+
+</head>
+<body>
+<form method="post" enctype="multipart/form-data" class="form-inline">
+<h3>BUYER REGISTRATION</h3><BR>
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input type="submit" value="REGISTER"><BR><BR>
+    <a href="/login/">LOGIN</a>
+    <a href="/">BACK TO HOME</a>
+</form>
+</div>
+</body>
+</html>

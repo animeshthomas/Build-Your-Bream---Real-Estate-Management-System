@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <title>
+        {% block title %}
+        {{ page_title|default:"Admin page"}}
+        {% endblock title %}}
+    </title>
+</head>
+<body>
+ <table border="5">
+<tr>
+    <td>
+        <td><a href="/pdis/">VIEW ALL PROPERTY LISTINGS</a></td>
+        <td><a href="/ser/">ADVANCED SEARCH</a></td>
+        <td><a href="/resp/">VIEW RESPONSES FROM OWNER</a></td>
+        <td><a href="/editbuyer/">EDIT PROFILE</a></td>
+        <td><a href="/">LOGOUT</a>
+        </td>
+</tr>
+ </table>
+ <section>
+{% block content %}
+
+{% endblock content %}
+ </section>
+</body>
+</html>

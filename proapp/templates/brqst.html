@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body><table border="2">
+    <tr>
+        <th>RQNO</th>
+        <th>RQDATE</th>
+        <th>BID</th>
+        <th>BNAME</th>
+        <th>PID</th>
+        <th>PRICE</th>
+        <th>QPRICE</th>
+        <th>RIGHTS</th>
+
+    </tr>
+ {% for i in a %}
+
+
+<tr>
+    <td>{{i.rqno}}</td>
+    <td>{{i.rqdate}}</td>
+    <td>{{i.bid}}</td>
+    <td>{{i.bname}}</td>
+    <td>{{i.pid}}</td>
+    <td>{{i.price}}</td>
+    <td>{{i.qprice}}</td>
+    <td>{{i.rights}</td>
+
+
+</tr>
+
+   {% endfor %}
+</table>
+</body>
+</html>

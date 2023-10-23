@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <title>
+        {% block title %}
+        {{ page_title|default:"Admin page"}}
+        {% endblock title %}}
+    </title>
+</head>
+<body>
+ <table border="5">
+<tr>
+
+   <td>
+        <a href="/addp/">POST YOUR PROPERTY</a></td>
+        <td><a href="/acc/">VIEW RESPONSES</a></td>
+        <td><a href="/editowner/">EDIT PROFILE</a></td>
+        <td><a href="/">LOGOUT</a>
+        </td>
+
+
+</tr>
+
+ </table>
+ <section>
+{% block content %}
+
+{% endblock content %}
+ </section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+
+</head>
+<body>
+<table border="2">
+
+    <tr>
+        <th>OID</th>
+        <th>ONAME</th>
+        <th>PHONENO</th>
+        <th>EMAIL</th>
+        <th>ADDRESS</th>
+        <th>IMAGE</th>
+        <th>USERNAME</th>
+        <th>PASSWORD</th>
+        <th>RIGHTS</th>
+        <th>DELETE</th>
+
+    </tr>
+ {% for i in a %}
+
+
+
+<tr>
+    <td>{{i.oid}}</td>
+    <td>{{i.oname}}</td>
+    <td>{{i.phoneno}}</td>
+    <td>{{i.email}}</td>
+    <td>{{ i.address }}</td>
+    <td> <img src="{{ i.photo.url }}" height="150" width="250"> </td>
+    <td>{{i.username}}</td>
+    <td>{{i.password}}</td>
+    <td>{{i.rights}}</td>
+    <td><a href="/odelete/{{ i.oid }}"><input type="button" value="DELETE"></a></td>
+</tr>
+
+   {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>user list</title>
+
+</style>
+</head>
+<body>
+<table border="2">
+    <tr>
+
+        <th>BID</th>
+        <th>BNAME</th>
+        <th>PHONENO</th>
+        <th>EMAIL</th>
+        <th>ADDRESS</th>
+        <th>USERNAME</th>
+        <th>PASSWORD</th>
+        <th>DELETE</th>
+
+
+    </tr>
+    {% for i in x %}
+
+<tr>
+     <td>{{i.bid}}</td>
+    <td>{{i.bname}}</td>
+    <td>{{i.phoneno}}</td>
+    <td>{{i.email}}</td>
+    <td>{{ i.address }}</td>
+    <td>{{i.username}}</td>
+    <td>{{i.password}}</td>
+    <td><a href="/bdelete/{{ i.bid }}"><input type="button" value="DELETE"></a></td>
+</tr>
+
+   {% endfor %}
+</table>
+</body>
+</html>

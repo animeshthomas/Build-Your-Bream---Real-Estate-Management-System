@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+
+</head>
+<body>
+<table border="2">
+    <tr>
+
+        <th>PID</th>
+        <th>OID</th>
+        <th>PTYPE</th>
+        <th>TTYPE</th>
+        <th>OTYPE</th>
+        <th>PRICE</th>
+        <th>DESCRIPTION</th>
+        <th>STATE</th>
+        <th>DISTRICT</th>
+        <th>TOWN</th>
+        <th>PINCODE</th>
+        <th>EMAIL</th>
+        <th>PHONE NO</th>
+        <th>BUILT AREA(SQFT)</th>
+        <th>PHOTO1</th>
+        <th>PHOTO2</th>
+        <th>PHOTO3</th>
+        <th>PHOTO4</th>
+        <th>PHOTO5</th>
+        <th>BARGAIN</th>
+        <th>PURCHASE</th>
+    </tr>
+
+ {% for i in a %}
+
+
+<tr>
+    <td>{{i.pid}}</td>
+    <td>{{i.oid}}</td>
+    <td>{{i.ptype}}</td>
+    <td>{{i.ttype}}</td>
+    <td>{{i.otype}}</td>
+    <td>{{i.price}}</td>
+    <td>{{i.des}}</td>
+    <td>{{i.state}}</td>
+    <td>{{i.district}}</td>
+    <td>{{i.town}}</td>
+    <td>{{i.pincode}}</td>
+    <td>{{i.email}}</td>
+    <td>{{i.phoneno}}</td>
+    <td>{{i.builtarea}}</td>
+    <td> <img src="{{ i.p1.url }}" height="150" width="250"> </td>
+    <td> <img src="{{ i.p2.url }}" height="150" width="250"> </td>
+    <td> <img src="{{ i.p3.url }}" height="150" width="250"> </td>
+    <td> <img src="{{ i.p4.url }}" height="150" width="250"> </td>
+    <td> <img src="{{ i.p5.url }}" height="150" width="250"> </td>
+    <td><a href="/rqst/{{i.pid}}/{{i.price}}/{{i.oid}}">BARGAIN</a></td>
+
+    <td><a href="/buyn/{{i.pid}}/{{i.oid}}/{{i.price}}">PURCHASE</a></td>
+
+</tr>
+
+   {% endfor %}
+</table>
+</body>
+</html>

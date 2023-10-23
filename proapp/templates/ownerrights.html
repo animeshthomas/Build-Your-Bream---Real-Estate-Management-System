@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="2" color="black">
+    {% for i in a %}
+
+<tr>
+    <td>{{i.oid}}</td>
+    <td>{{i.oname}}</td>
+    <td>{{i.phoneno}}</td>
+    <td>{{i.email}}</td>
+    <td>{{ i.address }}</td>
+    <td> <img src="{{ i.photo.url }}" height="150" width="250"> </td>
+    <td>{{i.username}}</td>
+    <td>{{i.password}}</td>
+    <td>{{i.rights}}</td>
+    <td><a href="/updater/{{i.oid}}"> Approve </a></td>
+    <td><a href="/oreject/{{i.oid}}">Reject</a></td>
+</tr>
+    {% endfor %}
+</table>
+<a href="/">BACK TO HOME</a>
+
+</body>
+</html>
